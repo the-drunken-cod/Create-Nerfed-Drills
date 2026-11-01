@@ -25,6 +25,7 @@ eclipse
 run
 run-data
 runs
+node_modules
 
 # local-only version overrides
 versions/*.local.properties
