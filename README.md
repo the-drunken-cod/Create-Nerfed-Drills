@@ -1,26 +1,22 @@
 <div align="center" style="text-align: center;">
 
-# #REPLACE_NAME
-#REPLACE_DESCRIPTION
-
-![Banner](./.github/assets/banner.png)
+# Create: Nerfed Drills
+Nerfs Mechanical Drills on Contraptions so mining doesn't become trivial with Create installed.
 
 </div>
 
 ## Introduction:
-#REPLACE_INTRODUCTION
+Applies a mixin to Create's `BlockBreakingMovementBehaviour` to modify the mining speed and drop chances of Mechanical Drills.  
+These multipliers are configured in the server config, apply immediately, and can also limit any other breaking block like Mechanical Saws.
 
 <br>
 
 ## Installation:
-You can visit the [releases page](https://github.com/#REPLACE_REPO/releases), the [TODO: Modrinth page](), or the [TODO: CurseForge page]() to download the latest version of the mod.  
+You can visit the [releases page](https://github.com/the-drunken-cod/Create-Nerfed-Drills/releases), the [TODO: Modrinth page](), or the [TODO: CurseForge page]() to download the latest version of the mod.  
 Then simply place the downloaded JAR file into your Minecraft `mods` folder and launch the game with either NeoForge or Fabric.  
-  
-> [!IMPORTANT]  
-> The **Fabric version** requires [Cloth Config API](https://modrinth.com/mod/cloth-config) to be installed as well.
 
 > [!NOTE]  
-> You will need either the [NeoForge](https://neoforge.dev/) or [Fabric](https://fabricmc.net/) mod loader installed to run the mod.  
+> You will need the [NeoForge](https://neoforge.dev/) mod loader and the [Create mod](https://modrinth.com/mod/create) installed to run the mod.  
 > An easy way of doing this is by creating a modded game instance in a launcher like [ATLauncher](https://atlauncher.com/) or [MultiMC.](https://multimc.org/)
 
 <br>
@@ -37,12 +33,12 @@ Then simply place the downloaded JAR file into your Minecraft `mods` folder and 
 <br>
 
 ## License:
-This project is licensed under the AGPL-3.0-or-later License.  
-See the [`LICENSE.txt` file](https://github.com/#REPLACE_REPO/blob/develop/LICENSE.txt) for details.
+This project is licensed under the LGPL-3.0-or-later License.  
+See the [`LICENSE.txt` file](https://github.com/the-drunken-cod/blob/develop/LICENSE.txt) for details.
 
 <br>
 
 ## Disclaimers:
-NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.  
-  
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+- NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.  
+- THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+- IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
