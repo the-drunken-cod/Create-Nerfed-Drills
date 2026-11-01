@@ -23,6 +23,7 @@ build
 .gzoltar
 eclipse
 run
+run-data
 runs
 
 # local-only version overrides

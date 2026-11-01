@@ -5,12 +5,10 @@ import java.util.ServiceLoader;
 import com.drunkencod.create_nerfed_drills.Constants;
 import com.drunkencod.create_nerfed_drills.config.IConfigHelper;
 import com.drunkencod.create_nerfed_drills.platform.services.IPlatformHelper;
-import com.drunkencod.create_nerfed_drills.registry.IRegistryHelper;
 
 public class Services {
 
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
-    public static final IRegistryHelper REGISTRY = load(IRegistryHelper.class);
     public static final IConfigHelper CONFIG = load(IConfigHelper.class);
 
     public static <T> T load(Class<T> clazz) {

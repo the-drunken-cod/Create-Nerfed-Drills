@@ -1,6 +1,6 @@
 package com.drunkencod.create_nerfed_drills;
 
-public class MultiLoaderTemplate {
+public class CreateNerfedDrills {
 
     public static void init() {
     }

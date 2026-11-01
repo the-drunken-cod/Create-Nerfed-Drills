@@ -13,24 +13,16 @@ package com.drunkencod.create_nerfed_drills.config;
  */
 public interface IConfigHelper {
 
-    /**
-     * Example startup (common) config value — read once during mod initialisation.
-     *
-     * @return {@code true} if the example startup option is enabled
-     */
-    boolean getExampleStartupBool();
+    /** Multiplier for Drill Contraption mining speed. */
+    float getBreakingSpeedMultiplier();
+
+    /** Multiplier for Drill Contraption mining drop chance. */
+    float getBreakingDropChance();
 
     /**
-     * Example server-side config value.
-     *
-     * @return {@code true} if the example server option is enabled
+     * Whether to only apply the multipliers to Mechanical Drills on contraptions,
+     * or also to Mechanical Saws and other breaking blocks implementing
+     * BlockBreakingMovementBehaviour.
      */
-    boolean getExampleServerBool();
-
-    /**
-     * Example client-side config value.
-     *
-     * @return {@code true} if the example client option is enabled
-     */
-    boolean getExampleClientBool();
+    boolean getOnlyNerfDrills();
 }
