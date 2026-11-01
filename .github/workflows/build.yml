@@ -61,6 +61,7 @@ jobs:
       CI: "true"
       STORE_PATH: ""
       PNPM_VERSION: 12
+      RUN_DATAGEN: false
 
     strategy:
       matrix:
@@ -120,7 +121,7 @@ jobs:
           echo "Found value: MC_VERSION=$MC_VERSION"
 
       - name: "[NeoForge] Run DataGen"
-        if: ${{ inputs.build_neoforge == true }}
+        if: ${{ env.RUN_DATAGEN && inputs.build_neoforge == true }}
         run: ./gradlew :neoforge:runData
 
       - name: "[NeoForge] Build JAR"
@@ -128,7 +129,7 @@ jobs:
         run: ./gradlew :neoforge:build
 
       # - name: "[Fabric] Run DataGen"
-      #   if: ${{ inputs.build_fabric == true }}
+      #   if: ${{ env.RUN_DATAGEN && inputs.build_fabric == true }}
       #   run: ./gradlew :fabric:runData
 
       # - name: "[Fabric] Build JAR"
