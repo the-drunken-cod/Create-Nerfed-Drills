@@ -11,15 +11,15 @@ public class NeoForgeConfigHelper implements IConfigHelper {
     // Common (startup) config
     // -------------------------------------------------------------------------
 
-    public static final CommonConfig COMMON;
-    private static final ModConfigSpec COMMON_SPEC;
+    // public static final CommonConfig COMMON;
+    // private static final ModConfigSpec COMMON_SPEC;
 
-    static {
-        Pair<CommonConfig, ModConfigSpec> specPair = new ModConfigSpec.Builder()
-                .configure(CommonConfig::new);
-        COMMON = specPair.getLeft();
-        COMMON_SPEC = specPair.getRight();
-    }
+    // static {
+    // Pair<CommonConfig, ModConfigSpec> specPair = new ModConfigSpec.Builder()
+    // .configure(CommonConfig::new);
+    // COMMON = specPair.getLeft();
+    // COMMON_SPEC = specPair.getRight();
+    // }
 
     // -------------------------------------------------------------------------
     // Server config
@@ -39,15 +39,15 @@ public class NeoForgeConfigHelper implements IConfigHelper {
     // Client config
     // -------------------------------------------------------------------------
 
-    public static final ClientConfig CLIENT;
-    private static final ModConfigSpec CLIENT_SPEC;
+    // public static final ClientConfig CLIENT;
+    // private static final ModConfigSpec CLIENT_SPEC;
 
-    static {
-        Pair<ClientConfig, ModConfigSpec> specPair = new ModConfigSpec.Builder()
-                .configure(ClientConfig::new);
-        CLIENT = specPair.getLeft();
-        CLIENT_SPEC = specPair.getRight();
-    }
+    // static {
+    // Pair<ClientConfig, ModConfigSpec> specPair = new ModConfigSpec.Builder()
+    // .configure(ClientConfig::new);
+    // CLIENT = specPair.getLeft();
+    // CLIENT_SPEC = specPair.getRight();
+    // }
 
     // -------------------------------------------------------------------------
     // Registration — called from MultiLoaderTemplateMod constructor
@@ -59,9 +59,9 @@ public class NeoForgeConfigHelper implements IConfigHelper {
      * so that configs are registered before the world loads.
      */
     public void register(ModContainer modContainer) {
-        modContainer.registerConfig(ModConfig.Type.COMMON, COMMON_SPEC);
+        // modContainer.registerConfig(ModConfig.Type.COMMON, COMMON_SPEC);
         modContainer.registerConfig(ModConfig.Type.SERVER, SERVER_SPEC);
-        modContainer.registerConfig(ModConfig.Type.CLIENT, CLIENT_SPEC);
+        // modContainer.registerConfig(ModConfig.Type.CLIENT, CLIENT_SPEC);
     }
 
     // -------------------------------------------------------------------------
@@ -69,51 +69,62 @@ public class NeoForgeConfigHelper implements IConfigHelper {
     // -------------------------------------------------------------------------
 
     @Override
-    public boolean getExampleStartupBool() {
-        return COMMON.exampleStartupBool.get();
+    public float getBreakingSpeedMultiplier() {
+        return (float) SERVER.breakingSpeedMultiplier.getAsDouble();
     }
 
     @Override
-    public boolean getExampleServerBool() {
-        return SERVER.exampleServerBool.get();
+    public float getBreakingDropChance() {
+        return (float) SERVER.breakingDropChance.getAsDouble();
     }
 
     @Override
-    public boolean getExampleClientBool() {
-        return CLIENT.exampleClientBool.get();
+    public boolean getOnlyNerfDrills() {
+        return SERVER.onlyNerfDrills.get();
     }
 
     // -------------------------------------------------------------------------
     // Inner config classes
     // -------------------------------------------------------------------------
 
-    public static class CommonConfig {
-        public final ModConfigSpec.BooleanValue exampleStartupBool;
+    // public static class CommonConfig {
+    // public final ModConfigSpec.BooleanValue exampleStartupBool;
 
-        CommonConfig(ModConfigSpec.Builder builder) {
-            exampleStartupBool = builder
-                    .comment("Example common (startup) config boolean")
-                    .define("exampleStartupBool", false);
-        }
-    }
+    // CommonConfig(ModConfigSpec.Builder builder) {
+    // exampleStartupBool = builder
+    // .comment("Example common (startup) config boolean")
+    // .define("exampleStartupBool", false);
+    // }
+    // }
 
     public static class ServerConfig {
-        public final ModConfigSpec.BooleanValue exampleServerBool;
+        public final ModConfigSpec.DoubleValue breakingSpeedMultiplier;
+        public final ModConfigSpec.DoubleValue breakingDropChance;
+        public final ModConfigSpec.BooleanValue onlyNerfDrills;
 
         ServerConfig(ModConfigSpec.Builder builder) {
-            exampleServerBool = builder
-                    .comment("Example server config boolean")
-                    .define("exampleServerBool", false);
+            breakingSpeedMultiplier = builder
+                    .comment("Multiplier for Drill Contraption mining speed.")
+                    .defineInRange("breakingSpeedMultiplier", 1.0D, 0.0D, Double.MAX_VALUE);
+
+            breakingDropChance = builder
+                    .comment("Multiplier for Drill Contraption mining drop chance.")
+                    .defineInRange("breakingDropChance", 1.0D, 0.0D, Double.MAX_VALUE);
+
+            onlyNerfDrills = builder
+                    .comment(
+                            "Whether to only apply the multipliers to Mechanical Drills on contraptions, or also to Mechanical Saws and other breaking blocks implementing BlockBreakingMovementBehaviour.")
+                    .define("onlyNerfDrills", true);
         }
     }
 
-    public static class ClientConfig {
-        public final ModConfigSpec.BooleanValue exampleClientBool;
+    // public static class ClientConfig {
+    // public final ModConfigSpec.BooleanValue exampleClientBool;
 
-        ClientConfig(ModConfigSpec.Builder builder) {
-            exampleClientBool = builder
-                    .comment("Example client config boolean")
-                    .define("exampleClientBool", false);
-        }
-    }
+    // ClientConfig(ModConfigSpec.Builder builder) {
+    // exampleClientBool = builder
+    // .comment("Example client config boolean")
+    // .define("exampleClientBool", false);
+    // }
+    // }
 }

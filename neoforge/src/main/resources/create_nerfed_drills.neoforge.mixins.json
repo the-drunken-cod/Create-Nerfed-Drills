@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "com.drunkencod.create_nerfed_drills.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": ["BlockBreakingMovementBehaviourMixin"],
   "client": [],
   "server": [],
   "injectors": {
