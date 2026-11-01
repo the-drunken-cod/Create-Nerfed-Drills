@@ -13,11 +13,11 @@ on:
         type: boolean
         required: true
         default: true
-      build_fabric:
-        description: "Build JAR for Fabric"
-        type: boolean
-        required: true
-        default: true
+      # build_fabric:
+      #   description: "Build JAR for Fabric"
+      #   type: boolean
+      #   required: true
+      #   default: true
       upload_artifact:
         description: "Upload build artifacts"
         type: boolean
@@ -36,11 +36,11 @@ on:
         type: boolean
         required: true
         default: true
-      build_fabric:
-        description: "Build JAR for Fabric"
-        type: boolean
-        required: true
-        default: true
+      # build_fabric:
+      #   description: "Build JAR for Fabric"
+      #   type: boolean
+      #   required: true
+      #   default: true
       upload_artifact:
         description: "Upload build artifacts"
         type: boolean
@@ -127,13 +127,13 @@ jobs:
         if: ${{ inputs.build_neoforge == true }}
         run: ./gradlew :neoforge:build
 
-      - name: "[Fabric] Run DataGen"
-        if: ${{ inputs.build_fabric == true }}
-        run: ./gradlew :fabric:runData
+      # - name: "[Fabric] Run DataGen"
+      #   if: ${{ inputs.build_fabric == true }}
+      #   run: ./gradlew :fabric:runData
 
-      - name: "[Fabric] Build JAR"
-        if: ${{ inputs.build_fabric == true }}
-        run: ./gradlew :fabric:build
+      # - name: "[Fabric] Build JAR"
+      #   if: ${{ inputs.build_fabric == true }}
+      #   run: ./gradlew :fabric:build
 
       - name: "[Artifacts] Move and Remove Files"
         run: |

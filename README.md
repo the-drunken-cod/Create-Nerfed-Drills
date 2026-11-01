@@ -13,7 +13,7 @@ These multipliers are configured in the server config, apply immediately, and ca
 
 ## Installation:
 You can visit the [releases page](https://github.com/the-drunken-cod/Create-Nerfed-Drills/releases), the [TODO: Modrinth page](), or the [TODO: CurseForge page]() to download the latest version of the mod.  
-Then simply place the downloaded JAR file into your Minecraft `mods` folder and launch the game with either NeoForge or Fabric.  
+Then simply place the downloaded JAR file into your Minecraft `mods` folder and launch the game with NeoForge.  
 
 > [!NOTE]  
 > You will need the [NeoForge](https://neoforge.dev/) mod loader and the [Create mod](https://modrinth.com/mod/create) installed to run the mod.  
