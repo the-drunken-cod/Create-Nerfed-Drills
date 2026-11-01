@@ -36,11 +36,11 @@
       "projectName": "neoforge",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\build\\moddev\\clientRunProgramArgs.txt"
+        "@C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dfactory_symbols%%C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\bin\\main"
+        "@C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dcreate_nerfed_drills%%C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\neoforge\\run",
       "console": "internalConsole",
@@ -57,13 +57,13 @@
       "projectName": "neoforge",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\build\\moddev\\dataRunProgramArgs.txt"
+        "@C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\build\\moddev\\dataRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\build\\moddev\\dataRunVmArgs.txt",
-        "-Dfml.modFolders\u003dfactory_symbols%%C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\bin\\main"
+        "@C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dcreate_nerfed_drills%%C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\bin\\main"
       ],
-      "cwd": "${workspaceFolder}\\neoforge\\run",
+      "cwd": "${workspaceFolder}\\neoforge\\run-data",
       "console": "internalConsole",
       "shortenCommandLine": "none"
     },
@@ -78,11 +78,11 @@
       "projectName": "neoforge",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\build\\moddev\\serverRunProgramArgs.txt"
+        "@C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dfactory_symbols%%C:\\Users\\sven1\\code\\cod\\MultiLoader-Template\\neoforge\\bin\\main"
+        "@C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dcreate_nerfed_drills%%C:\\Users\\sven1\\code\\cod\\Create-Nerfed-Drills\\neoforge\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\neoforge\\run",
       "console": "internalConsole",
