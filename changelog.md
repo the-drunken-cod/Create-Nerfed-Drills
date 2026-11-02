@@ -1,3 +1,9 @@
+## 1.2.0
+- Added the ability to configure the mod using the in-game "Mods > Config" menu in Singleplayer worlds.
+- Added an ugly temporary icon.
+
+<br>
+
 ## 1.1.0
 - Added the ability to override multipliers in the config for any amount of dimensions.  
   This could be used to undo the applied nerf in specific mining dimensions, and punish different dimensions with different multiplier values.
