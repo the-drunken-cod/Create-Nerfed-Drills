@@ -17,7 +17,7 @@ The mod applies two mixins to Create's `BlockBreakingMovementBehaviour` to modif
 <br>
 
 ## Installation:
-You can visit the [releases page](https://github.com/the-drunken-cod/Create-Nerfed-Drills/releases), the [Modrinth page](https://modrinth.com/mod/create-nerfed-drills), or the [TODO: CurseForge page]() to download the latest version of the mod.  
+You can visit the [releases page](https://github.com/the-drunken-cod/Create-Nerfed-Drills/releases), the [Modrinth page](https://modrinth.com/mod/create-nerfed-drills), or the [CurseForge page](https://www.curseforge.com/minecraft/mc-mods/create-nerfed-drills) to download the latest version of the mod.  
 Then simply place the downloaded JAR file into your Minecraft `mods` folder and launch the game with NeoForge.  
 
 > [!NOTE]  
