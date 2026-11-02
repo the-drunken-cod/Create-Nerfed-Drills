@@ -1,14 +1,7 @@
 {
     "create_nerfed_drills.configuration.breakingSpeedMultiplier": "Contraption Breaking Speed Multiplier",
-    "create_nerfed_drills.configuration.breakingSpeedMultiplier.comment.1": "Multiplier for Drill Contraption breaking speed. A value of 0.0 will make breaking impossible.",
-    "create_nerfed_drills.configuration.breakingSpeedMultiplier.comment.2": "Note: as the breaking speed is based on calculating the next tick at which to progress mining, setting this to a low value and then back to a high value can take a lot of time to apply for contraptions that are currently actively mining, or even require a complete server restart when it was set to 0.0 before.",
     "create_nerfed_drills.configuration.breakingDropChance": "Contraption Breaking Drop Chance Multiplier",
-    "create_nerfed_drills.configuration.breakingDropChance.comment.1": "Multiplier for Drill Contraption breaking drop chance. A value of 0.0 will make breaking drop nothing.",
     "create_nerfed_drills.configuration.onlyNerfDrills": "Only Nerf Mechanical Drills?",
-    "create_nerfed_drills.configuration.onlyNerfDrills.comment.1": "Whether to only apply the multipliers to Mechanical Drills on contraptions, or also to Mechanical Saws and other breaking blocks from addon mods that are implementing Create's BlockBreakingMovementBehaviour.",
     "create_nerfed_drills.configuration.dimensionSpeedMultipliers": "Per-Dimension Breaking Speed Multipliers",
-    "create_nerfed_drills.configuration.dimensionSpeedMultipliers.comment.1": "Per-dimension overrides for breakingSpeedMultiplier.",
-    "create_nerfed_drills.configuration.dimensionDropChances": "Per-Dimension Drop Chance Multipliers",
-    "create_nerfed_drills.configuration.dimensionDropChances.comment.1": "Per-dimension overrides for breakingDropChance.",
-    "create_nerfed_drills.configuration.meta.dimension_format": "Format: \"<dimension_id>=<multiplier>\", e.g. \"minecraft:the_nether=0.5\". Spaces are ignored."
+    "create_nerfed_drills.configuration.dimensionDropChances": "Per-Dimension Drop Chance Multipliers"
 }

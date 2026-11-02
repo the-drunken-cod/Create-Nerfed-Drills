@@ -1,7 +1,7 @@
 ## 1.2.0
 - Added the ability to configure the mod using the in-game "Mods > Config" menu in Singleplayer worlds.
-- Added English and German translations for all config options.
 - Added an ugly temporary icon.
+- Fixed a bug where contraptions would get stuck for IRL years when the speed multiplier was ever set to 0.0, even after a server restart.
 
 <br>
 

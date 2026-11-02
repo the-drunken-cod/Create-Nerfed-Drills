@@ -1,14 +1,7 @@
 {
     "create_nerfed_drills.configuration.breakingSpeedMultiplier": "Multiplikator für die Abbaugeschwindigkeit von Vorrichtungen",
-    "create_nerfed_drills.configuration.breakingSpeedMultiplier.comment.1": "Multiplikator für die Abbaugeschwindigkeit von Bohr-Vorrichtungen. Ein Wert von 0.0 macht den Abbau unmöglich.",
-    "create_nerfed_drills.configuration.breakingSpeedMultiplier.comment.2": "Hinweis: Da die Abbaugeschwindigkeit auf der Berechnung des nächsten Ticks basiert, an dem der Abbauvorgang fortgesetzt wird, kann es bei Vorrichtungen, die gerade aktiv abbauen, lange dauern, bis eine Änderung (z.B. von einem niedrigen auf einen hohen Wert) wirksam wird. Falls der Wert zuvor auf 0.0 gesetzt wurde, ist unter Umständen sogar ein vollständiger Server-Neustart erforderlich.",
     "create_nerfed_drills.configuration.breakingDropChance": "Multiplikator für die Drop-Wahrscheinlichkeit bei Vorrichtungen",
-    "create_nerfed_drills.configuration.breakingDropChance.comment.1": "Multiplikator für die Drop-Wahrscheinlichkeit bei Bohr-Vorrichtungen. Ein Wert von 0.0 führt dazu, dass beim Abbau keine Gegenstände mehr fallen gelassen werden.",
     "create_nerfed_drills.configuration.onlyNerfDrills": "Nur Mechanische Bohrer einschränken?",
-    "create_nerfed_drills.configuration.onlyNerfDrills.comment.1": "Legt fest, ob die Multiplikatoren nur auf Mechanische Bohrer in Vorrichtungen angewendet werden sollen, oder auch auf Mechanische Sägen sowie andere abbauende Blöcke aus Add-on-Mods, die das „BlockBreakingMovementBehaviour“ von Create implementieren.",
     "create_nerfed_drills.configuration.dimensionSpeedMultipliers": "Abbaugeschwindigkeits-Multiplikatoren pro Dimension",
-    "create_nerfed_drills.configuration.dimensionSpeedMultipliers.comment.1": "Dimensionsspezifische Überschreibungen für den \"breakingSpeedMultiplier\".",
-    "create_nerfed_drills.configuration.dimensionDropChances": "Drop-Wahrscheinlichkeits-Multiplikatoren pro Dimension",
-    "create_nerfed_drills.configuration.dimensionDropChances.comment.1": "Dimensionsspezifische Überschreibungen für die \"breakingDropChance\".",
-    "create_nerfed_drills.configuration.meta.dimension_format": "Format: \"<dimension_id>=<multiplier>\", z.B. \"minecraft:the_nether=0.5\". Leerzeichen werden ignoriert."
+    "create_nerfed_drills.configuration.dimensionDropChances": "Drop-Wahrscheinlichkeits-Multiplikatoren pro Dimension"
 }
