@@ -22,10 +22,10 @@ public abstract class BlockBreakingMovementBehaviourMixin {
 
     // #region block breaking speed
     @ModifyReturnValue(method = "getBlockBreakingSpeed", at = @At("TAIL"))
-    protected float createNerfedDrills$getBlockBreakingSpeed(float val) {
+    protected float createNerfedDrills$getBlockBreakingSpeed(float val, MovementContext context) {
         if (NeoForgeConfigHelper.SERVER.onlyNerfDrills.get() && !((Object) this instanceof DrillMovementBehaviour))
             return val;
-        return val * ((float) NeoForgeConfigHelper.SERVER.breakingSpeedMultiplier.getAsDouble());
+        return val * (float) NeoForgeConfigHelper.SERVER.getSpeedMultiplier(context.world);
     }
 
     // #region block drop chance
@@ -37,7 +37,7 @@ public abstract class BlockBreakingMovementBehaviourMixin {
             return;
         }
         Consumer<ItemStack> filtered = stack -> {
-            if (level.random.nextDouble() < NeoForgeConfigHelper.SERVER.breakingDropChance.getAsDouble())
+            if (level.random.nextDouble() < NeoForgeConfigHelper.SERVER.getDropChance(level))
                 original.accept(stack);
         };
         operation.call(level, pos, effectChance, filtered);
