@@ -8,7 +8,9 @@
 Nerfs Mechanical Drills on Contraptions in various ways so mining doesn't become trivial with [Create](https://modrinth.com/mod/create) installed.  
   
 Note: By default, this mod will use Create defaults and not do anything until configured;  
-After opening a Singleplayer world or starting your Multiplayer server, **edit the file `config/create_nerfed_drills-server.toml` to set custom multipliers.**  
+**To set custom multipliers**:
+- After opening a Singleplayer world, use the "Mods" option in the pause menu, then the "Config" button to configure the mod.
+- After starting your Multiplayer server, **edit the file `config/create_nerfed_drills-server.toml`**  
   
 You can set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
   
