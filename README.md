@@ -1,23 +1,36 @@
 <div align="center" style="text-align: center;">
 
 # Create: Nerfed Drills
-Nerfs Mechanical Drills on Contraptions so mining doesn't become trivial with Create installed.
 
 </div>
 
 ## Introduction:
-Applies a mixin to Create's `BlockBreakingMovementBehaviour` to modify the mining speed and drop chances of Mechanical Drills.  
-These multipliers are configured in the server config, apply immediately, and can also limit any other breaking block like Mechanical Saws.
+Nerfs Mechanical Drills on Contraptions in various ways so mining doesn't become trivial with [Create](https://modrinth.com/mod/create) installed.  
+  
+Note: By default, this mod will use Create defaults and not do anything, until configured;  
+After opening a Singleplayer world or starting your Multiplayer server, **edit the file `config/create_nerfed_drills-server.toml` to set custom multipliers.**  
+  
+You can set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
+  
+The mod applies two mixins to Create's `BlockBreakingMovementBehaviour` to modify the mining speed and drop chances, so any addon mod using the same class will also be affected by the configured multipliers.
 
 <br>
 
 ## Installation:
-You can visit the [releases page](https://github.com/the-drunken-cod/Create-Nerfed-Drills/releases), the [TODO: Modrinth page](), or the [TODO: CurseForge page]() to download the latest version of the mod.  
+You can visit the [releases page](https://github.com/the-drunken-cod/Create-Nerfed-Drills/releases), the [Modrinth page](https://modrinth.com/mod/create-nerfed-drills), or the [TODO: CurseForge page]() to download the latest version of the mod.  
 Then simply place the downloaded JAR file into your Minecraft `mods` folder and launch the game with NeoForge.  
 
 > [!NOTE]  
 > You will need the [NeoForge](https://neoforge.dev/) mod loader and the [Create mod](https://modrinth.com/mod/create) installed to run the mod.  
 > An easy way of doing this is by creating a modded game instance in a launcher like [ATLauncher](https://atlauncher.com/) or [MultiMC.](https://multimc.org/)
+
+<br>
+
+## Modpack Policy:
+You are free to use Create: Nerfed Drills in any modpacks; public or private :)  
+Just make sure you abide by [our license](#license), common sense, and [the Minecraft EULA.](https://minecraft.net/en-us/eula)  
+We would also appreciate a mention in the credits section of your modpack and a quick shout on our [discussion board](https://github.com/the-drunken-cod/Create-Nerfed-Drills/discussions) about your modpack (so we can check it out and play it ourselves!)  
+Please also consider [reporting any issues or suggestions](https://github.com/the-drunken-cod/Create-Nerfed-Drills/issues), so we can improve the mod for you and other players and have better compatibility with other mods.
 
 <br>
 
