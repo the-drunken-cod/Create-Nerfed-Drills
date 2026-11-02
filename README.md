@@ -7,7 +7,7 @@
 ## Introduction:
 Nerfs Mechanical Drills on Contraptions in various ways so mining doesn't become trivial with [Create](https://modrinth.com/mod/create) installed.  
   
-Note: By default, this mod will use Create defaults and not do anything, until configured;  
+Note: By default, this mod will use Create defaults and not do anything until configured;  
 After opening a Singleplayer world or starting your Multiplayer server, **edit the file `config/create_nerfed_drills-server.toml` to set custom multipliers.**  
   
 You can set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
@@ -21,7 +21,7 @@ You can visit the [releases page](https://github.com/the-drunken-cod/Create-Nerf
 Then simply place the downloaded JAR file into your Minecraft `mods` folder and launch the game with NeoForge.  
 
 > [!NOTE]  
-> You will need the [NeoForge](https://neoforge.dev/) mod loader and the [Create mod](https://modrinth.com/mod/create) installed to run the mod.  
+> You will need to have the [NeoForge](https://neoforge.dev/) mod loader and the [Create mod](https://modrinth.com/mod/create) installed to run the mod.  
 > An easy way of doing this is by creating a modded game instance in a launcher like [ATLauncher](https://atlauncher.com/) or [MultiMC.](https://multimc.org/)
 
 <br>
