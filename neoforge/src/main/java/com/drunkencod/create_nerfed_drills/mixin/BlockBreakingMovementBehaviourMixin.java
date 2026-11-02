@@ -22,7 +22,7 @@ public abstract class BlockBreakingMovementBehaviourMixin {
 
     // #region block breaking speed
     @ModifyReturnValue(method = "getBlockBreakingSpeed", at = @At("TAIL"))
-    protected float getBlockBreakingSpeed(float val) {
+    protected float createNerfedDrills$getBlockBreakingSpeed(float val) {
         if (NeoForgeConfigHelper.SERVER.onlyNerfDrills.get() && !((Object) this instanceof DrillMovementBehaviour))
             return val;
         return val * ((float) NeoForgeConfigHelper.SERVER.breakingSpeedMultiplier.getAsDouble());
@@ -30,15 +30,14 @@ public abstract class BlockBreakingMovementBehaviourMixin {
 
     // #region block drop chance
     @WrapOperation(method = "destroyBlock", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/utility/BlockHelper;destroyBlock(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;FLjava/util/function/Consumer;)V"))
-    private void yourmod$filterDrillDrops(Level level, BlockPos pos, float effectChance, Consumer<ItemStack> original,
-            Operation<Void> operation, MovementContext context, BlockPos breakingPos) {
+    private void createNerfedDrills$filterDrillDrops(Level level, BlockPos pos, float effectChance,
+            Consumer<ItemStack> original, Operation<Void> operation, MovementContext context, BlockPos breakingPos) {
         if (NeoForgeConfigHelper.SERVER.onlyNerfDrills.get() && !((Object) this instanceof DrillMovementBehaviour)) {
             operation.call(level, pos, effectChance, original);
             return;
         }
-        double chance = NeoForgeConfigHelper.SERVER.breakingDropChance.getAsDouble();
         Consumer<ItemStack> filtered = stack -> {
-            if (level.random.nextDouble() < chance)
+            if (level.random.nextDouble() < NeoForgeConfigHelper.SERVER.breakingDropChance.getAsDouble())
                 original.accept(stack);
         };
         operation.call(level, pos, effectChance, filtered);

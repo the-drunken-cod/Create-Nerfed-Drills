@@ -5,7 +5,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
-public class NeoForgeConfigHelper implements IConfigHelper {
+public class NeoForgeConfigHelper {
 
     // -------------------------------------------------------------------------
     // Common (startup) config
@@ -62,25 +62,6 @@ public class NeoForgeConfigHelper implements IConfigHelper {
         // modContainer.registerConfig(ModConfig.Type.COMMON, COMMON_SPEC);
         modContainer.registerConfig(ModConfig.Type.SERVER, SERVER_SPEC);
         // modContainer.registerConfig(ModConfig.Type.CLIENT, CLIENT_SPEC);
-    }
-
-    // -------------------------------------------------------------------------
-    // IConfigHelper implementation
-    // -------------------------------------------------------------------------
-
-    @Override
-    public float getBreakingSpeedMultiplier() {
-        return (float) SERVER.breakingSpeedMultiplier.getAsDouble();
-    }
-
-    @Override
-    public float getBreakingDropChance() {
-        return (float) SERVER.breakingDropChance.getAsDouble();
-    }
-
-    @Override
-    public boolean getOnlyNerfDrills() {
-        return SERVER.onlyNerfDrills.get();
     }
 
     // -------------------------------------------------------------------------
