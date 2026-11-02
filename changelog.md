@@ -1,5 +1,6 @@
 ## 1.2.0
 - Added the ability to configure the mod using the in-game "Mods > Config" menu in Singleplayer worlds.
+- Added English and German translations for all config options.
 - Added an ugly temporary icon.
 
 <br>

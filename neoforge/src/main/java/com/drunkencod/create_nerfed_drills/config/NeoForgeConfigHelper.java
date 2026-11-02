@@ -2,12 +2,15 @@ package com.drunkencod.create_nerfed_drills.config;
 
 import java.util.List;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
+
+import com.drunkencod.create_nerfed_drills.Constants;
 
 public class NeoForgeConfigHelper {
 
@@ -35,9 +38,7 @@ public class NeoForgeConfigHelper {
      * so that configs are registered before the world loads.
      */
     public static void register(ModContainer modContainer) {
-        // modContainer.registerConfig(ModConfig.Type.COMMON, COMMON_SPEC);
         modContainer.registerConfig(ModConfig.Type.SERVER, SERVER_SPEC);
-        // modContainer.registerConfig(ModConfig.Type.CLIENT, CLIENT_SPEC);
     }
 
     // -------------------------------------------------------------------------
@@ -53,33 +54,37 @@ public class NeoForgeConfigHelper {
 
         ServerConfig(ModConfigSpec.Builder builder) {
             breakingSpeedMultiplier = builder
-                    .comment(
-                            "Multiplier for Drill Contraption breaking speed. A value of 0.0 will make breaking impossible.")
-                    .comment(
-                            "Note: as the breaking speed is based on calculating the next tick at which to progress mining, setting this to a low value and then back to a high value can take a lot of time to apply for contraptions that are currently actively mining, or even require a complete server restart when it was set to 0.0 before.")
+                    .comment(getTr("breakingSpeedMultiplier.comment.1"))
+                    .comment(getTr("breakingSpeedMultiplier.comment.2"))
                     .defineInRange("breakingSpeedMultiplier", 1.0D, 0.0D, Double.MAX_VALUE);
 
             breakingDropChance = builder
-                    .comment(
-                            "Multiplier for Drill Contraption breaking drop chance. A value of 0.0 will make breaking drop nothing.")
+                    .comment(getTr("breakingDropChance.comment.1"))
                     .defineInRange("breakingDropChance", 1.0D, 0.0D, Double.MAX_VALUE);
 
             onlyNerfDrills = builder
-                    .comment(
-                            "Whether to only apply the multipliers to Mechanical Drills on contraptions, or also to Mechanical Saws and other breaking blocks from addon mods that are implementing Create's BlockBreakingMovementBehaviour.")
+                    .comment("onlyNerfDrills.comment.1")
                     .define("onlyNerfDrills", true);
 
-            String dimFormatLine = "Format: \"<dimension_id>=<multiplier>\", e.g. \"minecraft:the_nether=0.5\". Spaces are ignored.";
+            String dimFormatLine = getTr("meta.dimension_format");
 
             dimensionSpeedMultipliers = builder
-                    .comment("Per-dimension overrides for breakingSpeedMultiplier.", dimFormatLine)
+                    .comment(getTr("dimensionSpeedMultipliers.comment.1"), dimFormatLine)
                     .defineListAllowEmpty("dimensionSpeedMultipliers", List::of,
                             () -> "minecraft:the_nether=1.0", ServerConfig::isValidEntry);
 
             dimensionDropChances = builder
-                    .comment("Per-dimension overrides for breakingDropChance.", dimFormatLine)
+                    .comment(getTr("dimensionDropChances.comment.1"), dimFormatLine)
                     .defineListAllowEmpty("dimensionDropChances", List::of,
                             () -> "minecraft:the_nether=1.0", ServerConfig::isValidEntry);
+        }
+
+        /**
+         * Resolves the string behind the given partial translation key (prefix
+         * {@code create_nerfed_drills.configuration.})
+         */
+        protected static String getTr(String partialKey) {
+            return Component.translatable(Constants.MOD_ID + ".configuration." + partialKey).getString();
         }
 
         /**
