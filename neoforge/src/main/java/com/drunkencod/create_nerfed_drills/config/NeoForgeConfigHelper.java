@@ -52,15 +52,15 @@ public class NeoForgeConfigHelper {
         ServerConfig(ModConfigSpec.Builder builder) {
             breakingSpeedMultiplier = builder
                     .comment(
-                            "Multiplier for Drill Contraption breaking speed. A value of 0.0 will make breaking impossible.")
+                            "Multiplier for Drill Contraption breaking speed. A value of 1.0 equals the default speed and 0.0 will make breaking impossible.")
                     .comment(
                             "Note: as the breaking speed is based on calculating the next tick at which to progress mining, setting this to a low value and then back to a high value can take a lot of time to apply for contraptions that are currently actively mining, or even require a complete server restart when it was set to 0.0 before.")
-                    .defineInRange("breakingSpeedMultiplier", 1.0D, 0.0D, Double.MAX_VALUE);
+                    .defineInRange("breakingSpeedMultiplier", 0.5D, 0.0D, Double.MAX_VALUE);
 
             breakingDropChance = builder
                     .comment(
-                            "Multiplier for Drill Contraption breaking drop chance. A value of 0.0 will make breaking drop nothing.")
-                    .defineInRange("breakingDropChance", 1.0D, 0.0D, Double.MAX_VALUE);
+                            "Multiplier for Drill Contraption breaking drop chance. A value of 1.0 equals the default chance and 0.0 will make breaking drop nothing.")
+                    .defineInRange("breakingDropChance", 0.25D, 0.0D, Double.MAX_VALUE);
 
             onlyNerfDrills = builder
                     .comment(

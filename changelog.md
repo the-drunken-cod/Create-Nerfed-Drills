@@ -1,3 +1,11 @@
+## 1.3.0
+- Changed the default contraption drilling speed to `0.5x`
+- Changed the default contraption drilling drop chance to `0.25x`
+- Improved the mod icon.
+- Added a comparison video/GIF to the readme.
+
+<br>
+
 ## 1.2.0
 - Added the ability to configure the mod using the in-game "Mods > Config" menu in Singleplayer worlds.
 - Added an ugly temporary icon.
