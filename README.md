@@ -1,7 +1,7 @@
 <div align="center" style="text-align: center;">
 
 # Create: Nerfed Drills
-Nerfs Mechanical Drills on Contraptions in various ways so mining doesn't become trivial with [Create](https://modrinth.com/mod/create) installed:  
+Allows Mechanical Drills on Contraptions to be nerfed so mining doesn't become trivial with [Create](https://modrinth.com/mod/create) installed:  
   
 —  
   
@@ -14,12 +14,14 @@ Nerfs Mechanical Drills on Contraptions in various ways so mining doesn't become
 ## Introduction:
 By default, the drilling speed will be set to 0.5x and the drilling drop chance to 0.25x globally.  
 **To set custom multipliers**:
-- After loading into a Singleplayer world, use the "Mods" option in the pause menu, then the "Config" button after selecting "Create: Nerfed Drills" to configure the mod.
-- After starting your Multiplayer server once with the mod installed, **edit the file `config/create_nerfed_drills-server.toml`**  
+- After loading into a **Singleplayer world**, use the "Mods" option in the pause menu, then the "Config" button after selecting "Create: Nerfed Drills" to configure the mod.
+- After starting your **Multiplayer server** once with the mod installed, edit the file `config/create_nerfed_drills-server.toml`
+
+Configuration changes will be applied instantly and don't usually require a restart.  
   
-You can set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
+This mod allows you to set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
   
-The mod applies a few mixins to Create's `BlockBreakingMovementBehaviour` to modify the mining speed and drop chances, so any addon mod using the same class will also be affected by the configured multipliers.
+It does this by applying a few small mixins to Create's `BlockBreakingMovementBehaviour` to modify the mining speed and drop chances. Any addon mod using the same class will also be affected by the configured multipliers.
 
 <br>
 
