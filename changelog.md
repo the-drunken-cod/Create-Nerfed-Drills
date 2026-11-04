@@ -1,3 +1,8 @@
+## 1.3.1
+- NeoForge loader version is now more lenient and allows older patch versions than the project's default (which was `21.1.256`).
+
+<br>
+
 ## 1.3.0
 - Changed the default contraption drilling speed to `0.5x`
 - Changed the default contraption drilling drop chance to `0.25x`
