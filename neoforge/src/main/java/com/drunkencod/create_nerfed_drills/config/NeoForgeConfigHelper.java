@@ -46,6 +46,7 @@ public class NeoForgeConfigHelper {
         public final ModConfigSpec.DoubleValue breakingSpeedMultiplier;
         public final ModConfigSpec.DoubleValue breakingDropChance;
         public final ModConfigSpec.BooleanValue onlyNerfDrills;
+        public final ModConfigSpec.BooleanValue nerfSubLevelDrills;
         public final ModConfigSpec.ConfigValue<List<? extends String>> dimensionSpeedMultipliers;
         public final ModConfigSpec.ConfigValue<List<? extends String>> dimensionDropChances;
 
@@ -66,6 +67,12 @@ public class NeoForgeConfigHelper {
                     .comment(
                             "Whether to only apply the multipliers to Mechanical Drills on contraptions, or also to Mechanical Saws and other breaking blocks from addon mods that are implementing Create's BlockBreakingMovementBehaviour.")
                     .define("onlyNerfDrills", true);
+
+            nerfSubLevelDrills = builder
+                    .comment(
+                            "Whether to also apply the multipliers to Mechanical Drills (and, if onlyNerfDrills is false, other breaker blocks) placed directly on Create: Aeronautics / Sable sublevels, which aren't Create contraptions.",
+                            "Has no effect if Create: Aeronautics (Sable) isn't installed. Stationary drills in the regular world are never affected.")
+                    .define("nerfSubLevelDrills", true);
 
             String dimFormatLine = "Format: \"<dimension_id>=<multiplier>\", e.g. \"minecraft:the_nether=0.5\". Spaces are ignored.";
 

@@ -1,3 +1,8 @@
+## 1.4.0
+- Added a config toggle (`nerfSubLevelDrills`, enabled by default) to also nerf Mechanical Drills placed on [Create: Aeronautics](https://modrinth.com/mod/create-aeronautics) sublevels.
+
+<br>
+
 ## 1.3.1
 - NeoForge loader version is now more lenient and allows older patch versions than the project's default (which was `21.1.256`).
 

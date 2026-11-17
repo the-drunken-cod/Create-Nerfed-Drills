@@ -58,6 +58,15 @@ repositories {
     maven { url = "https://maven.createmod.net" }
     // Registrate (Create dependency)
     maven { url = "https://maven.ithundxr.dev/snapshots" }
+    // Sable Companion (Create Aeronautics sublevel detection)
+    exclusiveContent {
+        forRepository {
+            maven { url = "https://maven.ryanhcode.dev/releases" }
+        }
+        filter {
+            includeGroup("dev.ryanhcode.sable-companion")
+        }
+    }
 }
 
 dependencies {
@@ -67,4 +76,10 @@ dependencies {
     compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}")
+    // Sable Companion, jar-in-jar'd; has a safe default implementation that Sable overrides when installed
+    jarJar(implementation("dev.ryanhcode.sable-companion:sable-companion-common-${minecraft_version}:[${sable_companion_version},)")) {
+        version {
+            prefer(project.sable_companion_version)
+        }
+    }
 }

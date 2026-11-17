@@ -1,7 +1,7 @@
 <div align="center" style="text-align: center;">
 
 # Create: Nerfed Drills
-Allows Mechanical Drills on Contraptions to be nerfed so mining doesn't become trivial with [Create](https://modrinth.com/mod/create) installed:  
+Allows Mechanical Drills on Contraptions or Sable Sublevels to be nerfed so mining doesn't become trivial with [Create](https://modrinth.com/mod/create) installed:  
   
 —  
   
@@ -19,7 +19,7 @@ By default, the drilling speed will be set to 0.5x and the drilling drop chance 
 
 Configuration changes will be applied instantly and don't usually require a restart.  
   
-This mod allows you to set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
+This mod allows you to set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions or sublevels, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
   
 It does this by applying a few small mixins to Create's `BlockBreakingMovementBehaviour` to modify the mining speed and drop chances. Any addon mod using the same class will also be affected by the configured multipliers.
 

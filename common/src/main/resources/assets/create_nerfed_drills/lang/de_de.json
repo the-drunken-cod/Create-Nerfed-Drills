@@ -2,6 +2,7 @@
     "create_nerfed_drills.configuration.breakingSpeedMultiplier": "Multiplikator für die Abbaugeschwindigkeit von Vorrichtungen",
     "create_nerfed_drills.configuration.breakingDropChance": "Multiplikator für die Drop-Wahrscheinlichkeit bei Vorrichtungen",
     "create_nerfed_drills.configuration.onlyNerfDrills": "Nur Mechanische Bohrer einschränken?",
+    "create_nerfed_drills.configuration.nerfSubLevelDrills": "Bohrer auf Aeronautics-Subleveln einschränken?",
     "create_nerfed_drills.configuration.dimensionSpeedMultipliers": "Abbaugeschwindigkeits-Multiplikatoren pro Dimension",
     "create_nerfed_drills.configuration.dimensionDropChances": "Drop-Wahrscheinlichkeits-Multiplikatoren pro Dimension"
 }

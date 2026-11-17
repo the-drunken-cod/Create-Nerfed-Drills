@@ -2,6 +2,7 @@
     "create_nerfed_drills.configuration.breakingSpeedMultiplier": "Contraption Breaking Speed Multiplier",
     "create_nerfed_drills.configuration.breakingDropChance": "Contraption Breaking Drop Chance Multiplier",
     "create_nerfed_drills.configuration.onlyNerfDrills": "Only Nerf Mechanical Drills?",
+    "create_nerfed_drills.configuration.nerfSubLevelDrills": "Nerf Drills on Aeronautics Sublevels?",
     "create_nerfed_drills.configuration.dimensionSpeedMultipliers": "Per-Dimension Breaking Speed Multipliers",
     "create_nerfed_drills.configuration.dimensionDropChances": "Per-Dimension Drop Chance Multipliers"
 }
