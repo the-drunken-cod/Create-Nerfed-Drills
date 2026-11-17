@@ -1,5 +1,5 @@
 ## 1.4.0
-- Added a config toggle (`nerfSubLevelDrills`, enabled by default) to also nerf Mechanical Drills placed on [Create: Aeronautics](https://modrinth.com/mod/create-aeronautics) sublevels.
+- Added a config toggle (`nerfSubLevelDrills`, enabled by default) to also nerf Mechanical Drills placed on [Create: Aeronautics](https://modrinth.com/mod/create-aeronautics) sublevels. Rock Crushing Wheels will only be affected by the drop chance, since they're better balanced overall.
 
 <br>
 
