@@ -65,7 +65,7 @@ public class NeoForgeConfigHelper {
 
             onlyNerfDrills = builder
                     .comment(
-                            "Whether to only apply the multipliers to Mechanical Drills on contraptions, or also to Mechanical Saws and other breaking blocks from addon mods that are implementing Create's BlockBreakingMovementBehaviour.")
+                            "Whether to only apply the multipliers to Mechanical Drills on contraptions, or also to Mechanical Saws and other breaking blocks from addon mods that are implementing Create's BlockBreakingMovementBehaviour or BlockBreakingKineticBlockEntity.")
                     .define("onlyNerfDrills", true);
 
             nerfSubLevelDrills = builder

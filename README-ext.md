@@ -21,7 +21,7 @@ Configuration changes will be applied instantly and don't usually require a rest
   
 This mod allows you to set global breaking speed and drop chance multipliers, specify whether to only affect Drills on contraptions or sublevels, or also any other breaking block like Saws, and even define per-dimension overrides, which could be used to undo the applied nerf (or go the other way and apply a bonus) in specific mining dimensions and give different dimensions different multiplier values.  
   
-It does this by applying a few small mixins to Create's `BlockBreakingMovementBehaviour` to modify the mining speed and drop chances. Any addon mod using the same class will also be affected by the configured multipliers.
+It does this by applying a few small mixins to Create's `BlockBreakingMovementBehaviour` and `BlockBreakingKineticBlockEntity` to modify the mining speed and drop chances. Any addon mod using the same class will also be affected by the configured multipliers.
 
 <br>
 
